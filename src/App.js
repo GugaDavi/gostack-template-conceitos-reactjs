@@ -19,9 +19,9 @@ function App() {
 
   async function handleAddRepository() {
     const newRepository = await api.post("/repositories", {
-      title: `Repository Added: ${Date.now()}`,
+      title: `New Repository: ${Date.now()}`,
       url: "www.google.com.br",
-      techs: ["React, NodeJS"],
+      techs: ["React", "NodeJS"],
     });
 
     setRepositories([...repositories, newRepository.data]);
